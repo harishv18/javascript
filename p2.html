@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <center>
+    <h1>JS - variable</h1>
+  </center>
+  <hr>
+  <pre>
+    datatype
+    1) primitive data types
+    2) Non primitive data types
+
+    1) primitive data types
+    -- int (Integer) -> it accept only whole numbers ex: 0-9
+    -- float -> it accept decimal value ex: 5.2
+    -- boolean -> either true or false
+    -- char -> it accept single character ex: A
+    -- void -> returns null value
+
+    2) non primitive data types
+    -- Array
+    -- structure 
+    -- union
+    -- enum
+    -- pointer 
+    -- function
+  </pre>
+  <hr>
+  <script>
+    // var, const, let are the keywords, is used for to declare the variable
+    var firstName;
+    document.write(firstName, "<br>");
+    document.write("<b>without value:</b>",firstName,"<br><hr>");
+    firstName = "harish";
+    document.write("<b>with value:</b>",firstName,"<br>");
+    document.write("<b>with value:</b>"+firstName +"<br>");
+    document.write("<b>with value:",firstName,"</b><br>");
+    document.write(`<b>with value: ${firstName}</b><br>`);
+    document.write(`<p>typeof method: ${typeof(firstName)}</p><hr>`);
+
+    firstName = "h";
+    document.write("<b>with value:</b>",firstName,"<br>");
+    document.write("<b>with value:</b>"+firstName +"<br>");
+    document.write("<b>with value:",firstName,"</b><br>");
+    document.write(`<b>with value: ${firstName}</b><br>`);
+    document.write(`<p>typeof method: ${typeof(firstName)}</p><hr>`);
+
+    firstName = 1000;
+    document.write("<b>with value:</b>",firstName,"<br>");
+    document.write("<b>with value:</b>"+firstName +"<br>");
+    document.write("<b>with value:",firstName,"</b><br>");
+    document.write(`<b>with value: ${firstName}</b><br>`);
+    document.write(`<p>typeof method: ${typeof(firstName)}</p><hr>`);
+
+    firstName = 1000.55;
+    document.write("<b>with value:</b>",firstName,"<br>");
+    document.write("<b>with value:</b>"+firstName +"<br>");
+    document.write("<b>with value:",firstName,"</b><br>");
+    document.write(`<b>with value: ${firstName}</b><br>`);
+    document.write(`<p>typeof method: ${typeof(firstName)}</p><hr>`);
+
+    firstName = true;
+    document.write("<b>with value:</b>",firstName,"<br>");
+    document.write("<b>with value:</b>"+firstName +"<br>");
+    document.write("<b>with value:",firstName,"</b><br>");
+    document.write(`<b>with value: ${firstName}</b><br>`);
+    document.write(`<p>typeof method: ${typeof(firstName)}</p><hr>`);
+
+    firstName = false;
+    document.write("<b>with value:</b>",firstName,"<br>");
+    document.write("<b>with value:</b>"+firstName +"<br>");
+    document.write("<b>with value:",firstName,"</b><br>");
+    document.write(`<b>with value: ${firstName}</b><br>`);
+    document.write(`<p>typeof method: ${typeof(firstName)}</p><hr>`);
+  </script>
+</body>
+</html>
