@@ -1,0 +1,794 @@
+JavaScript Array Methods and Properties
+
+Name	Description
+at()	Returns an indexed element of an array
+concat()	Joins arrays and returns an array with the joined arrays
+constructor	Returns the function that created the Array object's prototype
+copyWithin()	Copies array elements within the array, to and from specified positions
+entries()	Returns a key/value pair Array Iteration Object
+every()	Checks if every element in an array pass a test
+fill()	Fill the elements in an array with a static value
+filter()	Creates a new array with every element in an array that pass a test
+find()	Returns the value of the first element in an array that pass a test
+findIndex()	Returns the index of the first element in an array that pass a test
+flat()	Concatenates sub-array elements
+flatMap()	Maps all array elements and creates a new flat array
+forEach()	Calls a function for each array element
+from()	Creates an array from an object
+includes()	Check if an array contains the specified element
+indexOf()	Search the array for an element and returns its position
+isArray()	Checks whether an object is an array
+join()	Joins all elements of an array into a string
+keys()	Returns a Array Iteration Object, containing the keys of the original array
+lastIndexOf()	Search the array for an element, starting at the end, and returns its position
+length	Sets or returns the number of elements in an array
+map()	Creates a new array with the result of calling a function for each array element
+pop()	Removes the last element of an array, and returns that element
+prototype	Allows you to add properties and methods to an Array object
+push()	Adds new elements to the end of an array, and returns the new length
+reduce()	Reduce the values of an array to a single value (going left-to-right)
+reduceRight()	Reduce the values of an array to a single value (going right-to-left)
+reverse()	Reverses the order of the elements in an array
+shift()	Removes the first element of an array, and returns that element
+slice()	Selects a part of an array, and returns the new array
+some()	Checks if any of the elements in an array pass a test
+sort()	Sorts the elements of an array
+splice()	Adds/Removes elements from an array
+toString()	Converts an array to a string, and returns the result
+unshift()	Adds new elements to the beginning of an array, and returns the new length
+valueOf()	Returns the primitive value of an array
+
+
+1)  at()
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let index = 2;
+let fruit = fruits.at(index);
+
+index	Optional.
+The index (position) of the array element to be returned.
+Default is 0.
+-1 returns the last element.
+
+2) concat()
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const children = arr1.concat(arr2);
+
+Description
+The concat() method concatenates (joins) two or more arrays.
+
+The concat() method returns a new array, containing the joined arrays.
+
+The concat() method does not change the existing arrays.
+
+3) constructor
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let text = fruits.constructor;
+
+Description
+The constructor property returns the function that created the Array prototype.
+
+For JavaScript arrays the constructor property returns:
+
+function Array() { [native code] }
+
+4) copyWithin
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.copyWithin(2, 0);
+
+The copyWithin() method copies array elements to another position in the array.
+
+The copyWithin() method overwrites the existing values.
+
+The copyWithin() method does not add items to the array.
+
+array.copyWithin(target, start, end)
+
+target	Required.
+The index (position) to copy the elements to.
+start	Optional.
+The start index (position). Default is 0.
+end	Optional.
+The end index (position). Default is the array length.
+
+5) entries()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits.entries();
+
+for (let x of f) {
+  document.getElementById("demo").innerHTML += x;
+}
+
+The entries() method returns an Array Iterator object with key/value pairs:
+
+[0, "Banana"]
+[1, "Orange"]
+[2, "Apple"]
+[3, "Mango"]
+
+The entries() method does not change the original array.
+
+6) every()
+
+const ages = [32, 33, 16, 40];
+
+ages.every(checkAge)
+
+function checkAge(age) {
+  return age > 18;
+}
+
+The every() method executes a function for each array element.
+
+The every() method returns true if the function returns true for all elements.
+
+The every() method returns false if the function returns false for one element.
+
+The every() method does not execute the function for empty elements.
+
+The every() method does not change the original array
+syntax:
+array.every(function(currentValue, index, arr), thisValue)
+
+Parameter	Description
+function()	Required.
+A function to be run for each element in the array.
+currentValue	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array of the current element.
+thisValue	Optional. Default undefined.
+A value passed to the function as its this value.
+
+6) fill
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.fill("Kiwi");
+
+The fill() method fills specified elements in an array with a value.
+
+The fill() method overwrites the original array.
+
+Start and end position can be specified. If not, all elements will be filled.
+
+syntax:
+array.fill(value, start, end)
+
+value	Required.
+The value to fill in.
+start	Optional.
+The start index (position).
+Default is 0.
+end	Optional.
+The stop index (position).
+Default is array length.
+
+7) filter()
+
+const ages = [32, 33, 16, 40];
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+The filter() method creates a new array filled with elements that pass a test provided by a function.
+
+The filter() method does not execute the function for empty elements.
+
+The filter() method does not change the original array.
+
+syntax:
+array.filter(function(currentValue, index, arr), thisValue)
+
+function()	Required.
+A function to run for each array element.
+currentValue	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array of the current element.
+thisValue	Optional. Default undefined
+A value passed to the function as its this value.
+
+8)  find()
+
+const ages = [3, 10, 18, 20];
+
+function checkAge(age) {
+  return age > 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.find(checkAge);
+}
+
+The find() method returns the value of the first element that passes a test.
+
+The find() method executes a function for each array element.
+
+The find() method returns undefined if no elements are found.
+
+The find() method does not execute the function for empty elements.
+
+The find() method does not change the original array.
+
+syntax:
+array.find(function(currentValue, index, arr),thisValue)
+
+function()	Required.
+A function to run for each array element.
+currentValue	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array of the current element.
+thisValue	Optional. Default undefined.
+A value passed to the function as its this value.
+
+9) findIndex()
+
+const ages = [3, 10, 18, 20];
+
+ages.findIndex(checkAge);
+
+function checkAge(age) {
+  return age > 18;
+}
+
+The findIndex() method executes a function for each array element.
+
+The findIndex() method returns the index (position) of the first element that passes a test.
+
+The findIndex() method returns -1 if no match is found.
+
+The findIndex() method does not execute the function for empty array elements.
+
+The findIndex() method does not change the original array.
+
+syntax:
+array.findIndex(function(currentValue, index, arr), thisValue)
+
+function()	Required.
+A function to be run for each array element.
+currentValue	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array of the current element.
+thisValue	Optional. Default undefined.
+A value passed to the function as its this value.
+
+10) flat()
+
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+
+The flat() method concatenates sub-array elements.
+syntax:
+array.flat(depth)
+
+Parameter	Description
+depth	Optional.
+How deep a nested array should be flattened.
+Default is 1.
+
+11) flatMap()
+
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap((x) => x * 2);
+
+The flatMap() method maps all array elements and creates a new flat array.
+
+flatMap() creates a new array from calling a function for every array element.
+
+flatMap() does not execute the function for empty elements.
+
+flatMap() does not change the original array.
+
+syntax:
+array.flatMap(function(currentValue, index, arr), thisValue)
+
+function()	Required.
+A function to be run for each array element.
+currentValue	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array of the current element.
+thisValue	Optional.
+Default value undefined.
+A value passed to the function to be used as its this value.
+
+12) forEach()
+
+const fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+The forEach() method calls a function for each element in an array.
+
+The forEach() method is not executed for empty elements.
+
+syntax:
+array.forEach(function(currentValue, index, arr), thisValue)
+
+function()	Required.
+A function to run for each array element.
+currentValue	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array of the current element.
+thisValue	Optional. Default undefined.
+A value passed to the function as its this value.
+
+13) from()
+
+Array.from("ABCDEFG")
+
+The Array.from() method returns an array from any object with a length property.
+
+The Array.from() method returns an array from any iterable object.
+
+syntax:
+Array.from(object, mapFunction, thisValue)
+
+object	Required.
+The object to convert to an array.
+mapFunction	Optional.
+A map function to call on each item.
+thisValue	Optional.
+A value to use as thisfor the mapFunction
+
+14) includes()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.includes("Mango");
+
+The includes() method returns true if an array contains a specified value.
+
+The includes() method returns false if the value is not found.
+
+The includes() method is case sensitive.
+
+syntax:
+array.includes(element, start)
+
+
+Parameter	Description
+element	Required.
+The value to search for.
+start	Optional.
+Start position. Default is 0.
+
+15) indexOf()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let index = fruits.indexOf("Apple");
+
+The indexOf() method returns the first index (position) of a specified value.
+
+The indexOf() method returns -1 if the value is not found.
+
+The indexOf() method starts at a specified index and searches from left to right.
+
+By default the search starts at the first element and ends at the last.
+
+Negative start values counts from the last element (but still searches from left to right).
+
+syntax:
+array.indexOf(item, start)
+
+item	Required.
+The value to search for.
+start	Optional.
+Where to start the search.
+Default value is 0.
+Negative values start the search from the end of the array.
+
+16) isArray()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let result = Array.isArray(fruits);
+
+The isArray() method returns true if an object is an array, otherwise false.
+
+syntax:
+Array.isArray(obj)
+
+
+Parameter	Description
+obj	Required.
+An object (or any data type) to be tested.
+
+17) join()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let text = fruits.join();
+
+The join() method returns an array as a string.
+
+The join() method does not change the original array.
+
+Any separator can be specified. The default is comma (,).
+
+syntax:
+array.join(separator)
+
+separator	Optional.
+The separator to be used.
+Default is a comma.
+
+18)  keys()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
+
+let text = "";
+for (let x of keys) {
+  text += x + "<br>";
+}
+
+The keys() method returns an Array Iterator object with the keys of an array.
+
+The keys() method does not change the original array.
+
+syntax:
+array.keys()
+
+19) lastIndexOf()
+
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let index = fruits.lastIndexOf("Apple");
+
+The lastIndexOf() method returns the last index (position) of a specified value.
+
+The lastIndexOf() method returns -1 if the value is not found.
+
+The lastIndexOf() starts at a specified index and searches from right to left.
+
+By defalt the search starts at the last element and ends at the first.
+
+Negative start values counts from the last element (but still searches from right to left).
+
+syntax:
+array.lastIndexOf(item, start)
+
+item	Required.
+The value to search for.
+start	Optional.
+Where to start the search.
+Default is the last element (array.length-1).
+Negative start values counts from the last element (but still searches from right to left).	
+
+20) length
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.length;
+
+The length property sets or returns the number of elements in an array.
+
+syntax:
+array.length
+array.length = setLengthNumber
+
+21) map()
+
+const numbers = [4, 9, 16, 25];
+const newArr = numbers.map(Math.sqrt)
+
+map() creates a new array from calling a function for every array element.
+
+map() does not execute the function for empty elements.
+
+map() does not change the original array.
+
+Syntax
+array.map(function(currentValue, index, arr), thisValue)
+
+
+Parameter	Description
+function()	Required.
+A function to be run for each array element.
+currentValue	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array of the current element.
+thisValue	Optional.
+Default value undefined.
+A value passed to the function to be used as its this value.
+
+22) pop()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+
+The pop() method removes (pops) the last element of an array.
+
+The pop() method changes the original array.
+
+The pop() method returns the removed element.
+
+syntax:
+array.pop()
+
+23) prototype
+
+Array.prototype.myUcase = function() {
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i].toUpperCase();
+  }
+};
+
+prototype allows you to add new properties and methods to arrays.
+
+prototype is a property available with all JavaScript objects.
+
+syntax:
+Array.prototype.name = value
+
+24) push()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+
+The push() method adds new items to the end of an array.
+
+The push() method changes the length of the array.
+
+The push() method returns the new length.
+
+syntax:
+array.push(item1, item2, ..., itemX)
+
+Parameters	Description
+item1
+item2
+..
+itemX	The item(s) to add to the array.
+Minimum one item is required.
+
+25) reduce()
+
+const numbers = [175, 50, 25];
+
+document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+The reduce() method executes a reducer function for array element.
+
+The reduce() method returns a single value: the function's accumulated result.
+
+The reduce() method does not execute the function for empty array elements.
+
+The reduce() method does not change the original array.
+
+Syntax
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+Parameter	Description
+function()	Required.
+A function to be run for each element in the array.
+Reducer function parameters:
+total	Required.
+The initialValue, or the previously returned value of the function.
+currentValue	Required.
+The value of the current element.
+currentIndex	Optional.
+The index of the current element.
+arr	Optional.
+The array the current element belongs to.
+initialValue	Optional.
+A value to be passed to the function as the initial value.
+
+26) reduceRight()
+
+const numbers = [175, 50, 25];
+
+document.getElementById("demo").innerHTML = numbers.reduceRight(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+The reduceRight() method executes a reducer function for each array element.
+
+The reduceRight() method works from right to left.
+
+The reduceRight() method returns a single value: the function's accumulated result.
+
+The reduceRight() method does not execute the function for empty elements.
+
+Syntax
+array.reduceRight(function(total, currentValue, currentIndex, arr), initialValue)
+Parameters
+Parameter	Description
+function()	Required.
+A function to be run for each element in the array.
+Reducer function parameters:
+total	Required.
+The initialValue, or the previously returned value of the function.
+currentValue	Required.
+The value of the current element.
+currentIndex	Optional.
+The index of the current element.
+arr	Optional.
+The array the element belongs to.
+initialValue	Optional.
+A value to be passed to the function as the initial value
+
+27) reverse()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.reverse();
+
+The reverse() method reverses the order of the elements in an array.
+
+The reverse() method overwrites the original array.
+
+Syntax
+array.reverse()
+
+28) shift()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+
+The shift() method removes the first item of an array.
+
+The shift() method changes the original array.
+
+The shift() method returns the shifted element.
+
+Syntax
+array.shift()
+
+29) slice()
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
+
+The slice() method returns selected elements in an array, as a new array.
+
+The slice() method selects from a given start, up to a (not inclusive) given end.
+
+The slice() method does not change the original array.
+
+Syntax
+array.slice(start, end)
+
+30) some()
+
+const ages = [3, 10, 18, 20];
+
+ages.some(checkAdult);
+function checkAdult(age) {
+  return age > 18;
+}
+
+The some() method checks if any array elements pass a test (provided as a callback function).
+
+The some() method executes the callback function once for each array element.
+
+The some() method returns true (and stops) if the function returns true for one of the array elements.
+
+The some() method returns false if the function returns false for all of the array elements.
+
+The some() method does not execute the function for empty array elements.
+
+The some() method does not change the original array.
+
+
+Syntax
+array.some(function(value, index, arr), this)
+Parameters
+Parameter	Description
+function	Required.
+A function to run for each array element.
+Function parameters:
+value	Required.
+The value of the current element.
+index	Optional.
+The index of the current element.
+arr	Optional.
+The array the current element belongs to.
+this	Optional. Default undefined.
+A value passed to the function to be used as its "this" value.
+
+31) sort()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+The sort() sorts the elements of an array.
+
+The sort() overwrites the original array.
+
+The sort() sorts the elements as strings in alphabetical and ascending order.
+
+Syntax
+array.sort(compareFunction)
+
+32) splice()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+The splice() method adds and/or removes array elements.
+
+The splice() method overwrites the original array.
+
+syntax
+array.splice(index, howmany, item1, ....., itemX)
+
+Parameters
+Parameter	Description
+index	Required.
+The position to add/remove items.
+Negative value defines the position from the end of the array.
+howmany	Optional.
+Number of items to be removed.
+item1, ..., itemX	Optional.
+New elements(s) to be added.
+
+33) toString()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let text = fruits.toString();
+
+The toString() method returns a string with array values separated by commas.
+
+The toString() method does not change the original array.
+
+Syntax
+array.toString()
+
+34) unshift()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon","Pineapple");
+
+The unshift() method adds new elements to the beginning of an array.
+
+The unshift() method overwrites the original array.
+
+Syntax
+array.unshift(item1, item2, ..., itemX)
+Parameters
+Type	Description
+item1
+item2
+..
+itemX	The item(s) to add to the array.
+Minimum one item is required.
+
+
+35) valueOf()
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const myArray = fruits.valueOf();
+
+The valueOf() method returns the array itself.
+
+The valueOf() method does not change the original array.
+
+fruits.valueOf() returns the same as fruits.
+
+Syntax
+array.valueOf()
