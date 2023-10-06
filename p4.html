@@ -32,7 +32,47 @@
     document.write(`<hr>`)
     // users[5] = "pachu";
     document.write(users);
-    console.log(users)
+    // console.log(users)
+    //1.2 array using constructor
+    document.write(`<h3>array using constructor</h3>`);
+
+    let emp = new Array();
+    document.write(`<h3>typeof(emp) : ${typeof emp}<hr>`);
+    emp[0] = "harish";
+    emp[1] = "john";
+    document.write(`emp = ${emp}<hr>`)
+    
+    //1.3 array using constructor parameter
+    document.write(`<h3>array using constuctor parameter</h3>`);
+    let colours = new Array("red","blue","green");
+    document.write(`<h3>typeof colors: ${typeof colours}</h3><hr>`);
+    document.write(`colors = ${colours}<hr>`)
+
+    //2. object array
+    document.write(`<h3>object array</h3>`)
+    const employee = {
+      name: "harish"
+    }
+    document.write(`<h3>typeof employee: ${typeof employee}</h3><hr>`);
+    document.write(`<h3>employee: ${employee}</h3><hr>`);
+    document.write(`employee = ${employee.name}<hr>`)
+
+    //object array
+    const empDetails = [
+      {name: "harish"}, { name: "pachu"}, { name: "viji"}
+    ];
+    document.write(`<h3>typeof empDetails: ${typeof empDetails}</h3><hr>`);
+    document.write(`<h3>employee: ${empDetails}</h3><hr>`);
+    document.write(`employee = ${empDetails[1]['name']}<hr>`)
+
+    //3. json array
+    document.write(`<h3>json array</h3>`)
+    const emppDetails = {
+      "name": "harish"
+    }
+    document.write(`<h3>typeof employee: ${typeof emppDetails}</h3><hr>`);
+    document.write(`<h3>employee: ${emppDetails}</h3><hr>`);
+    document.write(`employee = ${emppDetails.name}<hr>`)
   </script>
 </body>
 </html>
