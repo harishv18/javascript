@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <center>
+    <h1>Enter your marks and get your Grade</h1>
+    <input type="text" id="marks">
+    <button onClick="result()">Submit</button>
+  </center>
+  <script>
+    function result() {
+      var res = document.getElementById('marks').value;
+      if (res >= 70 && res <= 100) {
+        document.write(`<center><h1>You Scored between 70 and 100: Grade A</h1></center>`)
+      } else if (res >= 50 && res < 70) {
+        document.write(`<center><h1>You Scored between 50 and 69: Grade B</h1></center>`)
+      } else if (res >= 40 && res < 49) {
+        document.write(`<center><h1>You Scored between 40 and 49: Grade C</h1></center>`)
+      } else if (res >= 30 && res < 39) {
+        document.write(`<center><h1>You Scored between 30 and 39: Grade D</h1></center>`)
+      } else {
+        document.write(`<center><h1>You Scored less than 30: Fail!</h1></center>`)
+      }
+    }
+  </script>
+
+</body>
+
+</html>
