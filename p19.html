@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+    <h1>Call Back Function</h1>
+  </center>
+  <script>
+    function result(callBack) {
+      var val = callBack()
+      console.log(val)
+    }
+    function add() {
+      return 10+18;
+    }
+    result(add)
+  </script>
+</body>
+</html>

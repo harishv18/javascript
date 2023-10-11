@@ -10,10 +10,22 @@
     <h1>with parameter, without return value</h1>
   </center>
   <script>
-    function func(name) {
-      document.write(name);
+    // function func(name) {
+    //   document.write(name);
+    // }
+    // func("viji")
+    function withParameter(studentDetails) {
+      var student_name = studentDetails.student_name;
+      var student_rollno = studentDetails.student_rollno;
+      document.write(student_name + " " + student_rollno + " " + studentDetails.student_course)
     }
-    func("viji")
+    var student_info = {
+      student_name : "harish",
+      student_rollno : 58,
+      student_course: "B.E"
+    }
+    // withParameter(student_info)
+    document.write(`${withParameter(student_info)}`)
   </script>
 </body>
 </html>

@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <center>
     <h1>with parameter, with return value</h1>
   </center>
   <script>
-    function parameter_value(parameter) {
+    function parameter_value(parameter,para) {
       var val = parameter;
-      return val;
+      var val1 = para;
+      return val,val1;
+      // document.write(val)
     }
-    
-    document.write(`${parameter_value("harish")}`)
+
+    document.write(`${parameter_value("harish","pachu")}`)
+    // parameter_value("harisha","pachu")
   </script>
 </body>
+
 </html>

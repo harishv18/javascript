@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center><h1>Function</h1></center>
+  <hr>
+  <h1>ECMA SCRIPT CODE</h1>
+  <script>
+    document.write("<h1>Function Defining! (local Function)</h1>")
+    function sum(a,b){
+      return a + b;
+    }
+    document.write(`<h3> sum = ${sum(22,33)}</h3>`)
+
+    document.write("<h1>Function Expressions</h1>")
+    let a = function(){
+
+    }
+    let fullName = function(firstName, lastName){
+      return firstName + " " + lastName;
+    }
+    document.write(`<h3> fullname = ${fullName("harish","v")}</h3>`)
+    document.write("<h1>Arrow Functions</h1>")
+    let js = () => document.write("Arrow Functions<br><br>")
+    js()
+    let js1 = (a,b) => a + b;
+    document.write(js1(3,5))
+  </script>
+</body>
+</html>
