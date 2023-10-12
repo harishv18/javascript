@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+    <h1>Scopes</h1>
+  </center>
+  <hr>
+  <script>
+    // errors => syntax errors (compile errors)
+    //           logical errors (run time errors) - exceptions
+    // try catch block is used to handle run time errors (exception handling)
+    
+    // var x = 15;
+    
+    // if(x>10){
+    //   let a = 156;
+    //   document.write(a)
+    // }
+    // document.write(a)
+
+    try {
+      var x = 15;
+      if(x > 10){
+        let a = 156;
+        document.write(a)
+      }
+      document.write(a)
+    } catch (error) {
+      console.log(error)
+    }
+    finally {
+      document.write(" got output")
+    }
+  </script>
+</body>
+</html>

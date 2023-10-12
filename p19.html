@@ -10,14 +10,16 @@
     <h1>Call Back Function</h1>
   </center>
   <script>
-    function result(callBack) {
-      var val = callBack()
-      console.log(val)
+
+    function howAreYou(question,yes,no) {
+      
+      if(confirm(question)){
+        yes("I am fine! what about you")
+      }else{
+        no("I am feeling bad!")
+      }
     }
-    function add() {
-      return 10+18;
-    }
-    result(add)
+    howAreYou("How Are You",(message)=>{document.write(message)},(message)=>{document.write(message)})
   </script>
 </body>
 </html>

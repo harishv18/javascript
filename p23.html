@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var number1 = Number("10.5")
+    document.write(typeof number1 + "<br>")
+    var x = "123.456"
+    var y = '12345.6456776'
+    var z = 'Apple'
+    document.write(typeof x + "<br>")
+    document.write(typeof y + "<br>")
+    document.write(typeof z + "<br>")
+    var a = Number(x)
+    document.write(typeof a + "<br>")
+    var a1 = parseInt(x)
+    document.write(typeof a1 + " " + a1 + "<br>")
+    var a1 = parseFloat(y)
+    document.write(typeof a1 + " " + a1 + "<br>")
+    var a1 = parseFloat(y)
+    document.write(typeof a1 + " " + a1.toFixed() + "<br>")
+    document.write(typeof a1 + " " + a1.toFixed(1) + "<br>")
+    document.write(typeof a1 + " " + a1.toFixed(2) + "<br>")
+    document.write(typeof a1 + " " + a1.toFixed(3) + "<br>")
+
+    
+    document.write(Number(true)+ "<br>")
+    document.write(Number(false)+ "<br>")
+    document.write(Number(null)+ "<br>")
+    document.write(Number("123")+ "<br>")
+    document.write(Number(" ")+ "<br>")
+    document.write(Number("")+ "<br>")
+    document.write(Number("123e-1")+ "<br>")
+    document.write(Number("0xFF")+ "<br>")
+    document.write(Number("undefined")+ "<br>")
+    document.write(Number("null")+ "<br>")
+    document.write(Number("Hello World")+ "<br>")
+  </script>
+</body>
+</html>

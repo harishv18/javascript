@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+    <h1>scope</h1>
+  </center>
+  <hr>
+  <script>
+    //var is a weeker signal and always have global scope
+    //let and const are block scope variables
+
+    // if (true) {
+    //   // let age = 22;
+    //   // const age = 32;
+    //   var age = 30;
+    // }
+    // document.write(age)
+
+    const age = 22;
+    
+    if(age == 22 ){
+      document.write(age)
+    }
+  </script>
+</body>
+</html>
