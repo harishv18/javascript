@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var a = "123a";
+    document.write(`<h3> ${a}</h3>`);
+    document.write(`<h3> ${Number(a)}</h3>`);
+    document.write(`<h3> ${parseInt(a)}</h3>`);
+
+    document.write(`<h3> ${isNaN(123)}</h3>`)
+    document.write(`<h3> ${isNaN("123")}</h3>`)
+    document.write(`<h3> ${isNaN(" ")}</h3>`)
+    document.write(`<h3> ${isNaN(null)}</h3>`)
+    document.write(`<h3> ${isNaN(undefined)}</h3>`)
+    document.write(`<h3> ${isNaN("2023/07/23")}</h3>`)
+    document.write(`<h3> ${isNaN(0/0)}</h3>`)
+  </script>
+</body>
+</html>
