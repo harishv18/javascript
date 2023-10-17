@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center><h1>Array using constructor</h1></center><hr>
+  <script>
+    let arr = Array(1,2,3)
+    document.write(typeof arr)
+    document.writeln(`<br>`)
+    document.write(arr)
+    document.writeln(`<br>`)
+    document.write(arr[1])
+    arr[0] = 0;
+    document.writeln(`<br>`)
+    for (const iterator of arr) {
+      document.write(iterator + " ")
+    }
+    document.writeln(`<br>`)
+    let arr1 = new Array(34,32,44,54);
+    document.write(typeof arr1)
+    document.writeln(`<br>`)
+    document.write(arr1)
+    document.writeln(`<br>`)
+    arr1[3] = 4;
+    document.writeln(`<br>`)
+    for (const iterator of arr1) {
+      document.write(iterator + " ")
+    }
+  </script>
+</body>
+</html>

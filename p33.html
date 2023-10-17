@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+    <h1>object array</h1>
+  </center>
+  <script>
+    let users = [
+      {name : "harish",
+      age : 22,
+      education : "B.E"},
+      {name : "pachu",
+      age : 17,
+      education : "B.E"},
+      {name : "viji",
+      age : 49,
+      education : "B.com"}
+    ]
+    document.write(users[0]["name"])
+    document.write(users[1]["name"])
+    document.write(users[2]["name"])
+
+    // for (var i=0;i<users.length;i++) {
+    //   document.write(users[i][name])
+    //   document.write(users[i][age])
+    //   document.write(users[i][education])
+    // }
+    users.forEach((element) => {
+      document.write(element.name)
+      document.write(element.age)
+      document.write(element.education)
+    })
+  </script>
+</body>
+</html>
