@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center><h1>Mouse Events</h1></center>
+  <form action="">
+    <button type="button" onmouseover="mouse()" id="button1">Click on me</button>
+    <button type="button" onmousemove="mouse1()">Click on me</button>
+    <button type="button" onmouseout="mouse2()">Click on me</button>
+    <button type="button" onmouseenter="mouse3()">Click on me</button>
+    
+  </form>
+  <h1 id="demo"></h1>
+  <script>
+    function mouse() {
+      document.getElementById('demo').innerHTML = "Mouse over on me";
+      document.getElementById('demo').style.backgroundColor = "red"
+      document.getElementById('demo').style.color = "white";
+      document.getElementById('demo').style.padding = "20px";
+
+    }
+    function mouse1(){
+      document.getElementById('demo').innerHTML = "Mouse move on me";
+    }
+    function mouse2(){
+      document.getElementById('demo').innerHTML = "Mouse out on me";
+    }
+    function mouse3(){
+      document.getElementById('demo').innerHTML = "Mouse enter on me";
+    }
+    
+  </script>
+</body>
+</html>

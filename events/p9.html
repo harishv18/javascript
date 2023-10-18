@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <center>
+    <h1>Media Events</h1>
+  </center>
+  <hr>
+  <h3 id="msg"></h3>
+  <video src="assets/media/video.mp4" height="200px" controls onplay="playHan()"  onpause="pauseHan()" onvolumechange="volHan()" onseeking="seekHan()"></video>
+  <script>
+    var msg = document.getElementById("msg");
+    function playHan() {
+      msg.innerHTML = "Started playing video";
+      msg.style.color = "green"
+    }
+    function pauseHan() {
+      msg.innerHTML = "Paused playing video";
+      msg.style.color = "red"
+    }
+    function volHan() {
+      msg.innerHTML = "volume change playing video";
+      msg.style.color = "yellow"
+    }
+    function seekHan() {
+      msg.innerHTML = "seeking playing video";
+      msg.style.color = "blue"
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button" id="btn1" onmouseup="EnterHandler()">Mouse Events</button>
+  <button type="button" id="btn2" onmousedown="LeaveHandler()">Mouse Events</button>
+  
+  <script>
+    function EnterHandler() {
+      document.getElementById('btn1').innerHTML = "Mouse up"
+    }
+    function LeaveHandler() {
+      document.getElementById('btn2').innerHTML = "Mouse down"
+    }
+  </script>
+</body>
+</html>
