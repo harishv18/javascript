@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <form action="">
+    <h3><u>Contact Form</u></h3>
+    <label for="fullname">FullName</label>
+    <br>
+    <input type="text" name="fullname" id="fullname" required> 
+    <br>
+    <label for="email">Email id</label>
+    <br>
+    <input type="email" name="email" id="email" required> <br>
+    <label for="mnumber">Mobile number</label>
+    <br>
+    <input type="number" name="mnumber" id="mnumber" required> <br>
+    <label for="">City</label>
+    <br>
+    <select name="city" id="city"> <br>
+      <option value="Hassan">Hassan</option>
+      <option value="Mysore">Mysore</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Mangalore">Mangalore</option>
+      <option value="kunigal">kunigal</option>
+    </select>
+    <br>
+    <label for="gender">Gender</label>
+    <br>
+    
+    <span id="emailError" class="error"></span>
+    <span id="mobileNumberError" class="error"></span>
+    <input type="radio" name="gender" id="gender" value="Male" required>Male
+    <input type="radio" name="gender" id="gender" value="Female" required>Female
+
+    
+    <div id="langdiv">
+    <p>Languages (optional)</p>
+    <input type="checkbox" name="lang" id="lang" value="kannada"> kannada
+    <input type="checkbox" name="lang" id="lang" value="English"> English
+    <input type="checkbox" name="lang" id="lang" value="Hindi"> Hindi
+    <input type="checkbox" name="lang" id="lang" value="Tamil"> Tamil
+    <input type="checkbox" name="lang" id="lang" value="Telugu"> Telugu
+  </div>
+    <br>
+    <button type="submit" onclick="validateForm(event)">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+  <script src="assets/index.js"></script>
+</body>
+</html>
